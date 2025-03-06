@@ -1,7 +1,7 @@
 import { createSession, createChannel } from "better-sse";
 import { Request, Response, NextFunction } from "express";
-import { Logger } from "winston"; // Assuming winston for logging
-import { z } from "zod"; // For validation
+import { Logger } from "winston"; 
+import { z } from "zod"; 
 import { Publisher, RedisConfig, Subscriber } from "./pubSub";
 
 
@@ -10,14 +10,14 @@ export interface SSEConfig {
   heartbeatInterval?: number; // milliseconds
 }
 
-// Type definitions
+
 export interface User {
   id: string;
   name: string;
   permissions: string[];
 }
 
-// Message schema
+
 const MessageSchema = z.object({
   event: z.string(),
   data: z.any()
@@ -25,7 +25,6 @@ const MessageSchema = z.object({
 
 type Message = z.infer<typeof MessageSchema>;
 
-// SSE Service Class
 export class SSEService {
   private redisSubscriber: Subscriber;
   private redisPublisher: Publisher;
@@ -194,7 +193,7 @@ export class SSEService {
   }
 }
 
-// Factory functions
+
 export function createRedisPublisher(config: RedisConfig, logger: Logger): Publisher {
   return new Publisher(config, logger);
 }

@@ -57,7 +57,6 @@ export class Publisher {
   }
 }
 
-// Redis Subscriber Class
 export class Subscriber {
   private subscriber: Redis;
   private logger: Logger;
