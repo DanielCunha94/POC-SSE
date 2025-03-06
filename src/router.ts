@@ -41,7 +41,7 @@ class Router {
     this.app.get(
       '/sse',
       passport.authenticate('jwt', { session: false }),
-      async (req, res) => { await this.sseService.connect(req, res) })
+      async (req, res, next) => { await this.sseService.connect(req, res, next) })
   }
 
   private setupNotificationRoutes(): void {
