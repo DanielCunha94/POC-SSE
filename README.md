@@ -1,4 +1,4 @@
-# Proof of Concept (PoC) - SSEand Redis Pub/Sub
+# Proof of Concept (PoC) - SSE and Redis Pub/Sub
 
 This project is a Proof of Concept (PoC) demonstrating the use of Server-Sent Events (SSE) to communicate with the frontend. The backend services are distributed and managed through a load balancer, while inter-service communication is handled via Redis Pub/Sub.
 
