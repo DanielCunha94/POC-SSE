@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "concurrently \"ts-node-dev --respawn src/server1.ts\" \"ts-node-dev --respawn src/server2.ts\" \"ts-node-dev --respawn src/loadbalancer.ts\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:simple": "ts-node-dev --respawn src/server1.ts"
   },
   "dependencies": {
     "better-sse": "^0.14.1",
@@ -19,7 +20,8 @@
     "jsonwebtoken": "^9.0.2",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
-    "winston": "^3.17.0"
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

@@ -14,6 +14,6 @@ export const users: User[] = [
     email: 'daniel',
     password: '123',
     name: 'daniel',
-    permissions: ["newBloq", "newRent"],
+    permissions: ["newBloq"],
   }
 ];
